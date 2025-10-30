@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Level Luxury Cutz - Premium Barbershop Nairobi</title>
+    <meta name="description" content="Luxury barber services in Kilimani, Nairobi. Beard trim, hot towel shave, manicure, scalp treatment & more. Book online or walk in.">
+    <meta name="keywords" content="barbershop nairobi, luxury cutz, beard trim kilimani, hot towel shave, mens grooming yaya centre">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Next Level Luxury Cutz - Nairobi">
+    <meta property="og:description" content="Premium grooming in Kilimani. Book now or shop beard oils & tools.">
+    <meta property="og:image" content="https://images.pexels.com/photos/7697273/pexels-photo-7697273.jpeg?auto=compress&cs=tinysrgb&w=1200">
+    <meta property="og:url" content="https://nextlevelluxurycutz.co.ke">
+    <meta property="og:type" content="website">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Next Level Luxury Cutz",
+      "image": "https://images.pexels.com/photos/7697273/pexels-photo-7697273.jpeg",
+      "telephone": "+254717157308",
+      "email": "info@nextlevelluxurycutz.co.ke",
+      "url": "https://nextlevelluxurycutz.co.ke",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chania Ave, Yaya Court",
+        "addressLocality": "Kilimani, Nairobi",
+        "postalCode": "00100",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.2921,
+        "longitude": 36.8219
+      },
+      "openingHours": "Mo-Sa 09:00-21:00, Su 10:00-18:00",
+      "priceRange": "KES 600 - KES 2500",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Toilet"},
+        {"@type": "LocationFeatureSpecification", "name": "NFC mobile payments"},
+        {"@type": "LocationFeatureSpecification", "name": "Good for kids"}
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #8B0000;
+            --gold: #D4AF37;
+            --light-gold: #F4E4C1;
+            --dark-red: #5C0000;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --gray: #666;
+            --success: #27ae60;
+            --shadow: rgba(0, 0, 0, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--primary);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 20px var(--shadow);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            font-size: 28px;
+            font-weight: 900;
+            text-decoration: none;
+        }
+        
+        .logo i {
+            font-size: 32px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 35px;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .cart-icon {
+            position: relative;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .cart-icon:hover {
+            color: var(--gold);
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .cta-btn {
+            background: linear-gradient(135deg, var(--secondary), var(--dark-red));
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .cta-btn.whatsapp {
+            background: #25D366;
+        }
+        
+        .cta-btn:hover {
+            background: transparent;
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+        
+        /* Hero */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(139, 0, 0, 0.3)), url('https://images.pexels.com/photos/7697273/pexels-photo-7697273.jpeg?auto=compress&cs=tinysrgb&w=1920&fit=crop') center/cover;
+            animation: kenburns 20s infinite alternate;
+        }
+        
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+            color: var(--gold);
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            color: var(--light-gold);
+            animation: fadeInUp 1.2s ease;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1.4s ease;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary), var(--dark-red));
+            color: var(--white);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.5);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            border: 2px solid var(--gold);
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        /* Services */
+        .services {
+            background: var(--light-gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--gold), var(--secondary));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(139, 0, 0, 0.2);
+        }
+        
+        .service-card i {
+            font-size: 50px;
+            color: var(--gold);
+            margin-bottom: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .service-card .price {
+            font-size: 28px;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .btn-book {
+            background: var(--gold);
+            color: var(--primary);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-book:hover {
+            background: var(--secondary);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+        
+        /* Shop */
+        .shop {
+            background: var(--white);
+        }
+        
+        .shop-filters {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--gold);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gold);
+            color: var(--white);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(139, 0, 0, 0.2);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 10;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.1);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .product-description {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .product-price {
+            font-size: 24px;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .product-rating {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 12px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background: var(--secondary);
+            color: var(--white);
+        }
+        
+        /* Cart Modal */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: var(--white);
+            box-shadow: -5px 0 20px var(--shadow);
+            z-index: 2000;
+            transition: right 0.3s;
+            overflow-y: auto;
+        }
+        
+        .cart-modal.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cart-close {
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gold);
+        }
+        
+        .cart-items {
+            padding: 20px;
+        }
+        
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .cart-item-info {
+            flex: 1;
+        }
+        
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .cart-item-price {
+            color: var(--secondary);
+            font-weight: 700;
+        }
+        
+        .cart-item-remove {
+            color: var(--secondary);
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .cart-total {
+            padding: 20px;
+            border-top: 2px solid #eee;
+        }
+        
+        .cart-total-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .checkout-btn:hover {
+            background: var(--dark-red);
+        }
+        
+        /* Payment Modal */
+        .payment-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .payment-modal.active {
+            display: flex;
+        }
+        
+        .payment-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .payment-method {
+            padding: 20px;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-method:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+        
+        .payment-method i {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        /* Gallery */
+        .gallery {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(139, 0, 0, 0.8);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 40px;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.6);
+            color: var(--white);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        /* Reviews */
+        .reviews {
+            background: var(--light-gray);
+        }
+        
+        .review-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .review-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .review-date {
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .review-stars {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .review-text {
+            font-style: italic;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Contact */
+        .contact {
+            background: var(--white);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .contact-item i {
+            font-size: 30px;
+            color: var(--gold);
+            margin-top: 5px;
+        }
+        
+        .contact-item h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-item p {
+            color: var(--gray);
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #888;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: flex;
+            }
+            
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                display: none;
+            }
+            
+            nav.active {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .section-title h2 {
+                font-size: 36px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-modal {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#home" class="logo">
+                <i class="fas fa-cut"></i>
+                <span>Next Level Luxury Cutz</span>
+            </a>
+            <nav id="mainNav">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#services">Services</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="cart-icon" id="cartToggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+                <a href="tel:+254717157308" class="cta-btn"><i class="fas fa-phone"></i> Call</a>
+                <a href="https://wa.me/254717157308?text=Hi,%20I'd%20like%20to%20book%20a%20service" class="cta-btn whatsapp"><i class="fab fa-whatsapp"></i> Book</a>
+                <div class="mobile-menu" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Next Level Luxury Cutz</h1>
+            <p>Elevate your grooming in Kilimani, Nairobi</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">View Services</a>
+                <a href="https://wa.me/254717157308?text=Hi,%20I'd%20like%20to%20book%20a%20service" class="btn-secondary">Book via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Services</h2>
+                <p>Professional grooming tailored for the modern gentleman</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Scissor Cut</h3>
+                    <p>Precision styling with scissors</p>
+                    <div class="price">KES 1,200</div>
+                    <button class="btn-book" onclick="bookService('Scissor Cut')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Hot Towel Shave</h3>
+                    <p>Traditional luxury shave</p>
+                    <div class="price">KES 1,500</div>
+                    <button class="btn-book" onclick="bookService('Hot Towel Shave')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Beard Trim</h3>
+                    <p>Shape, line-up, condition</p>
+                    <div class="price">KES 800</div>
+                    <button class="btn-book" onclick="bookService('Beard Trim')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Scalp Treatment</h3>
+                    <p>Deep cleanse + massage</p>
+                    <div class="price">KES 1,000</div>
+                    <button class="btn-book" onclick="bookService('Scalp Treatment')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h3>Men's Manicure</h3>
+                    <p>Clean nails, soft hands</p>
+                    <div class="price">KES 800</div>
+                    <button class="btn-book" onclick="bookService('Men\'s Manicure')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tint"></i>
+                    <h3>Eyebrow Tinting</h3>
+                    <p>Defined brows in minutes</p>
+                    <div class="price">KES 600</div>
+                    <button class="btn-book" onclick="bookService('Eyebrow Tinting')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-droplet"></i>
+                    <h3>Beard Conditioning</h3>
+                    <p>Deep moisture & shine</p>
+                    <div class="price">KES 700</div>
+                    <button class="btn-book" onclick="bookService('Beard Conditioning')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spray-can"></i>
+                    <h3>Hair Straightening</h3>
+                    <p>Smooth, sleek finish</p>
+                    <div class="price">KES 1,800</div>
+                    <button class="btn-book" onclick="bookService('Hair Straightening')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-curling"></i>
+                    <h3>Curly Hair Styling</h3>
+                    <p>Define & enhance curls</p>
+                    <div class="price">KES 1,300</div>
+                    <button class="btn-book" onclick="bookService('Curly Hair Styling')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wax"></i>
+                    <h3>Waxing (Brows/Ears)</h3>
+                    <p>Quick & precise removal</p>
+                    <div class="price">KES 600</div>
+                    <button class="btn-book" onclick="bookService('Waxing')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-poo"></i>
+                    <h3>Shampoo & Conditioning</h3>
+                    <p>Revitalize your scalp</p>
+                    <div class="price">KES 600</div>
+                    <button class="btn-book" onclick="bookService('Shampoo & Conditioning')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Massage</h3>
+                    <p>Relaxing head & neck</p>
+                    <div class="price">KES 900</div>
+                    <button class="btn-book" onclick="bookService('Massage')">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Eyebrow Trimming</h3>
+                    <p>Sharp, groomed arches</p>
+                    <div class="price">KES 500</div>
+                    <button class="btn-book" onclick="bookService('Eyebrow Trimming')">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop -->
+    <section class="shop" id="shop">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Grooming Products</h2>
+                <p>Elevate your routine with luxury beard oils, pomades & tools</p>
+            </div>
+            <div class="shop-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="beard">Beard Care</button>
+                <button class="filter-btn" data-filter="hair">Hair Care</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+            </div>
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: var(--gold);">Our Work</h2>
+                <p style="color: var(--light-gold);">Real transformations from Kilimani—see the luxury in action</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697273/pexels-photo-7697273.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="African Black man getting scissor cut in barbershop" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Scissor Cut Precision</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697667/pexels-photo-7697667.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="Black African man receiving hot towel shave" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Hot Towel Shave Ritual</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/5853395/pexels-photo-5853395.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="African man beard trim grooming" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Beard Trim Mastery</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697219/pexels-photo-7697219.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="Black man scalp treatment massage" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Scalp Treatment Bliss</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697224/pexels-photo-7697224.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="African Black man men's manicure" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Men's Manicure Detail</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7389079/pexels-photo-7389079.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="Black man eyebrow tinting" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Eyebrow Tinting Precision</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697319/pexels-photo-7697319.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="African man beard conditioning oil" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Beard Conditioning Glow</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/10318057/pexels-photo-10318057.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="Black African man hair straightening salon" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Hair Straightening Sleek</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7388923/pexels-photo-7388923.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="African Black man curly hair styling" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Curly Hair Definition</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697396/pexels-photo-7697396.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="Black man waxing eyebrows grooming" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Waxing Clean Lines</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/7697400/pexels-photo-7697400.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="African man shampoo conditioning hair wash" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Shampoo & Conditioning Refresh</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/19028067/pexels-photo-19028067.jpeg?auto=compress&cs=tinysrgb&w=600&fit=crop" alt="Black African man relaxing massage barbershop" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-caption">Neck & Head Massage Relax</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client Love</h2>
+                <p>Real reviews from real Nairobi gents & moms</p>
+            </div>
+            <div class="services-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-name">Jean Lukaka</div>
+                        <div class="review-date">3 months ago</div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Amazing service, totally professional am a happy client thats why we always come back , kids cut, massage , pedicure"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-name">Morgan Ahenda</div>
+                        <div class="review-date">4 months ago</div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The most professional services both spa and cuts. No shaddiness just purely a lovely place to get professional services"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-name">Grace Muthoni</div>
+                        <div class="review-date">2 months ago</div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"My man lovedddddd it as a birthday present, especially the massage huyu hamuezi mroga after this …"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-name">cetrick bulinda</div>
+                        <div class="review-date">a year ago</div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Next level luxury Cutz is the best place to have a luxury cut,relaxing massage and dope manicure and pedicure.Thank you for the best services in town."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-name">Nancy Mitchum</div>
+                        <div class="review-date">a year ago</div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I was treated very well. So friendly and professional. I'm love how my hair feels. Thanks for taking care of me. "</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-name">evans karinga</div>
+                        <div class="review-date">4 months ago</div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"I have been at the place actually it's a nice place to get uar service,job well done to the stuffs."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Us</h2>
+                <p>PQ4Q+C8F, Chania Ave, Yaya Court, Kilimani, Nairobi</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Chania Ave, Yaya Court<br>Kilimani, Nairobi</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Call / WhatsApp</h3>
+                            <p><a href="tel:+254717157308">0717 157 308</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Hours</h3>
+                            <p>Mon–Sat: 9AM–9PM<br>Sunday: 10AM–6PM<br>Open ⋅ Closes 9 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h3>Amenities</h3>
+                            <p>Toilet • NFC payments • Good for kids</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8197714489826!2d36.8219!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTcnMzEuNiJTIDM2wrA0OScxOC44IkU!5e0!3m2!1sen!2ske!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Next Level Luxury Cutz</h3>
+                    <p>Elevate your grooming game in Kilimani. Premium cuts, luxury shaves, and spa treatments.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/254717157308" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/nextlevelluxurycutz" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#services">Services</a>
+                    <a href="#shop">Shop</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Next Level Luxury Cutz. All rights reserved. | Built by <strong>You</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <i class="fas fa-times cart-close" id="cartClose"></i>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+            <div class="cart-total-price" id="cartTotal">Total: KES 0</div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-content">
+            <h2 style="text-align: center; margin-bottom: 10px;">Select Payment Method</h2>
+            <p style="text-align: center; color: var(--gray); margin-bottom: 20px;">Choose your preferred payment option</p>
+            <div class="payment-methods">
+                <div class="payment-method" onclick="processPayment('mpesa')">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>M-Pesa</p>
+                </div>
+                <div class="payment-method" onclick="processPayment('card')">
+                    <i class="fas fa-credit-card"></i>
+                    <p>Card</p>
+                </div>
+            </div>
+            <button class="submit-btn" onclick="closePaymentModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Products Data
+        const products = [
+            { id: 1, name: "Luxury Beard Oil", category: "beard", price: 2500, image: "https://images.pexels.com/photos/30473035/pexels-photo-30473035.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop", description: "Argan & jojoba blend", rating: 5, stock: 15, badge: "Best Seller" },
+            { id: 2, name: "Strong Hold Pomade", category: "hair", price: 1800, image: "https://images.pexels.com/photos/7388935/pexels-photo-7388935.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop", description: "Natural shine", rating: 5, stock: 8, badge: "Low Stock" },
+            { id: 3, name: "Beard Balm", category: "beard", price: 2200, image: "https://images.pexels.com/photos/9395856/pexels-photo-9395856.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop", description: "Hydrates and styles", rating: 5, stock: 18 },
+            { id: 4, name: "Texturizing Clay", category: "hair", price: 1900, image: "https://images.pexels.com/photos/7388923/pexels-photo-7388923.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop", description: "Matte finish", rating: 4, stock: 22 },
+            { id: 5, name: "Professional Clipper Set", category: "tools", price: 8500, image: "https://images.pexels.com/photos/18213699/pexels-photo-18213699.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop", description: "Cordless", rating: 5, stock: 12, badge: "New" },
+            { id: 6, name: "Scalp Massager", category: "tools", price: 1200, image: "https://images.pexels.com/photos/7697219/pexels-photo-7697219.jpeg?auto=compress&cs=tinysrgb&w=400&fit=crop", description: "Stimulates growth", rating: 4, stock: 30 }
+        ];
+
+        let cart = JSON.parse(localStorage.getItem('nextLevelCart')) || [];
+
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('productsGrid');
+            const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+            
+            grid.innerHTML = filtered.map(product => `
+                <div class="product-card" data-category="${product.category}">
+                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    ${product.stock < 10 ? '<div class="low-stock">Low Stock</div>' : ''}
+                    <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-rating">
+                            ${'<i class="fas fa-star"></i>'.repeat(product.rating)}
+                        </div>
+                        <div class="product-price">KES ${product.price.toLocaleString()}</div>
+                        <button class="add-to-cart" onclick="addToCart(${product.id})">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+            if (existing) existing.quantity++;
+            else cart.push({ ...product, quantity: 1 });
+            updateCart();
+            showNotification('Added to cart!');
+        }
+
+        function updateCart() {
+            localStorage.setItem('nextLevelCart', JSON.stringify(cart));
+            document.getElementById('cartCount').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            renderCart();
+        }
+
+        function renderCart() {
+            const items = document.getElementById('cartItems');
+            const total = document.getElementById('cartTotal');
+            if (cart.length === 0) {
+                items.innerHTML = '<p style="text-align:center;padding:40px;color:var(--gray);">Your cart is empty</p>';
+                total.textContent = 'Total: KES 0';
+                return;
+            }
+            items.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">KES ${item.price.toLocaleString()} x ${item.quantity}</div>
+                    </div>
+                    <i class="fas fa-trash cart-item-remove" onclick="removeFromCart(${item.id})"></i>
+                </div>
+            `).join('');
+            const sum = cart.reduce((s, i) => s + i.price * i.quantity, 0);
+            total.textContent = `Total: KES ${sum.toLocaleString()}`;
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(i => i.id !== id);
+            updateCart();
+        }
+
+        document.getElementById('cartToggle').addEventListener('click', () => {
+            const modal = document.getElementById('cartModal');
+            modal.style.display = 'block';
+            setTimeout(() => modal.classList.add('active'), 10);
+        });
+
+        document.getElementById('cartClose').addEventListener('click', () => {
+            const modal = document.getElementById('cartModal');
+            modal.classList.remove('active');
+            setTimeout(() => modal.style.display = 'none', 300);
+        });
+
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            if (cart.length === 0) return showNotification('Cart is empty!');
+            document.getElementById('paymentModal').classList.add('active');
+        });
+
+        function processPayment(method) {
+            showNotification(`Processing via ${method.toUpperCase()}...`);
+            setTimeout(() => {
+                showNotification('Payment successful!');
+                cart = [];
+                updateCart();
+                closePaymentModal();
+                document.getElementById('cartModal').classList.remove('active');
+            }, 2000);
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').classList.remove('active');
+        }
+
+        document.getElementById('mobileMenuToggle').addEventListener('click', () => {
+            document.getElementById('mainNav').classList.toggle('active');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProducts(btn.dataset.filter);
+            });
+        });
+
+        function bookService(service) {
+            window.open(`https://wa.me/254717157308?text=Hi, I'd like to book: ${service}`, '_blank');
+        }
+
+        function showNotification(msg) {
+            const n = document.createElement('div');
+            n.style.cssText = 'position:fixed;top:100px;right:20px;background:var(--success);color:white;padding:20px 30px;border-radius:8px;box-shadow:0 5px 20px rgba(0,0,0,0.3);z-index:10000;animation:slideIn 0.3s ease';
+            n.textContent = msg;
+            document.body.appendChild(n);
+            setTimeout(() => {
+                n.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => n.remove(), 300);
+            }, 3000);
+        }
+
+        renderProducts();
+        updateCart();
+    </script>
+</body>
+</html>
